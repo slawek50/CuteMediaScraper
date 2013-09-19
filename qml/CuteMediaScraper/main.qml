@@ -4,13 +4,16 @@ Rectangle {
     width: 360
     height: 360
     Text {
+        id: text
         text: qsTr("Hello World")
         anchors.centerIn: parent
+
     }
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            Qt.quit();
+            anchor.incValue();
+            text.text = anchor.value
         }
     }
 }
