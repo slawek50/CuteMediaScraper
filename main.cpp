@@ -1,16 +1,17 @@
 #include <QtGui/QGuiApplication>
 #include <QQmlContext>
 #include "qtquick2applicationviewer.h"
-#include "controller/anchor.h"
+#include "controller/FileFilm.h"
+#include <QFile>
 
 int main(int argc, char *argv[])
 {
-    Anchor anchor;
+    FileFilm film;
 
     QGuiApplication app(argc, argv);
 
     QtQuick2ApplicationViewer viewer;
-    viewer.rootContext()->setContextProperty("anchor", &anchor);
+    viewer.rootContext()->setContextProperty("film", &film);
     viewer.setMainQmlFile(QStringLiteral("qml/CuteMediaScraper/main.qml"));
     viewer.showExpanded();
 

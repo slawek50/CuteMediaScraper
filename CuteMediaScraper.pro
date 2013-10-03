@@ -13,7 +13,15 @@ QML_IMPORT_PATH =
 
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp \
-    controller/anchor.cpp
+    controller/TypeMedia.cpp \
+    controller/Format.cpp \
+    controller/RessourceMusic.cpp \
+    controller/RessourceFilm.cpp \
+    controller/RessourceEpisode.cpp \
+    controller/FileMusic.cpp \
+    controller/FileMedia.cpp \
+    controller/FileFilm.cpp \
+    controller/FileEpisode.cpp
 
 # Installation path
 # target.path =
@@ -23,6 +31,16 @@ include(qtquick2applicationviewer/qtquick2applicationviewer.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    controller/anchor.h
+    controller/Format.h \
+    controller/RessourceFilm.h \
+    controller/RessourceEpisode.h \
+    controller/FilmFile.h \
+    controller/EpisodeFile.h \
+    controller/FileMusic.h \
+    controller/FileFilm.h \
+    controller/FileEpisode.h \
+    controller/FileMedia.h \
+    controller/TypeMedia.h \
+    controller/RessourceMusic.h
 
 CONFIG -= X86_64
