@@ -10,9 +10,11 @@ class TypeMedia : public QObject {
     Q_OBJECT
 
  public:
-    TypeMedia();
+    TypeMedia(QString name, QString pathFolder);
+    void setFormat(int formatID);
     QString getFormat();
     QList<Format *> getFormats();
+    int addFormat(Format *format);
 
  private:
     QString _name;

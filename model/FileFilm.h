@@ -7,9 +7,10 @@
 class FileFilm : public FileMedia {
 
  public:
-    FileFilm();
+    FileFilm(QFile *file);
     QString getSimpleName();
     bool moveFile(int idRessource);
+    QList<RessourceFilm *> getRessources();
 
  public:
     QList<RessourceFilm *> _ressourceFilms;

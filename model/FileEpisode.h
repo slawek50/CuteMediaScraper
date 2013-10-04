@@ -7,8 +7,10 @@
 class FileEpisode : public FileMedia {
 
  public:
+    FileEpisode(QFile *file);
     QString getSimpleName();
     bool moveFile(int idRessource);
+    QList<RessourceEpisode *> getRessources();
 
  private:
     QList<RessourceEpisode *> _ressourceEpisodes;

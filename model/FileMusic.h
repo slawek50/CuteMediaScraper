@@ -7,9 +7,10 @@
 class FileMusic : public FileMedia {
 
  public:
-    FileMusic();
+    FileMusic(QFile *file);
     QString getSimpleName();
     bool moveFile(int idRessource);
+    QList<RessourceMusic *> getRessources();
 
  public:
     QList<RessourceMusic *> _ressourceMusics;

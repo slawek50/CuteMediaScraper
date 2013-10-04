@@ -1,13 +1,13 @@
 #ifndef RessourceFilm_h
 #define RessourceFilm_h
 
-#include <QObject>
 #include <QString>
+#include "IRessource.h"
 
-class RessourceFilm : public QObject {
-    Q_OBJECT
+class RessourceFilm : public IRessource {
 
  public:
+    RessourceFilm(QString title, int year, QString imdbID, QString photoURL);
     QString getTitle();
     int getYear();
     QString getImdbID();

@@ -30,9 +30,7 @@ Rectangle {
 
         Button {
             onClicked: {
-
-                name.text = film.getSimpleName();
-                query.text = film.getPath();
+                query.text = listFilesCtrl.addFile(name.text);
             }
         }
     }

@@ -8,8 +8,9 @@ class Format : public QObject {
     Q_OBJECT
 
  public:
-    Format();
+    Format(QString format);
     QString getExemple();
+    QString getFormat();
 
  private:
     QString _format;

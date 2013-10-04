@@ -1,13 +1,13 @@
 #ifndef RessourceMusic_h
 #define RessourceMusic_h
 
-#include <QObject>
 #include <QString>
+#include "IRessource.h"
 
-class RessourceMusic : public QObject {
-    Q_OBJECT
+class RessourceMusic : public IRessource {
 
  public:
+    RessourceMusic(QString artist, QString albulm, QString title);
     QString getArtist();
     QString getAlbulm();
     QString getTitle();

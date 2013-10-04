@@ -1,13 +1,13 @@
 #ifndef RessourceEpisode_h
 #define RessourceEpisode_h
 
-#include <QObject>
 #include <QString>
+#include "IRessource.h"
 
-class RessourceEpisode : public QObject {
-    Q_OBJECT
+class RessourceEpisode : public IRessource {
 
  public:
+    RessourceEpisode(QString tvShow, QString season, int episodeNum, QString title);
     QString getTvShow();
     QString getSeason();
     int getEpisodeNum();

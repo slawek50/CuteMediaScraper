@@ -7,23 +7,25 @@
 #include <QStringBuilder>
 #include <QRegExp>
 #include "TypeMedia.h"
+#include "IRessource.h"
 
 class FileMedia : public QObject {
     Q_OBJECT
 
 public:
-    FileMedia();
-    Q_INVOKABLE QString getName();
-    Q_INVOKABLE QString getPath();
+    FileMedia(QFile *file);
+    QString getName();
+    QString getPath();
     QString getPathName();
-    Q_INVOKABLE virtual QString getSimpleName()  = 0;
+    virtual QString getSimpleName()  = 0;
     virtual bool moveFile(int idRessource)  = 0;
+    QList<IRessource *> getRessources();
 
-private:
+protected:
     QString _name;
     QString _ext;
     QString _path;
-    TypeMedia *myMediaType;
+    TypeMedia *_typeMedia;
 };
 
 #endif  // MediaFile_h

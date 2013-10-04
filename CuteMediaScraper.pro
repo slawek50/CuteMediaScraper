@@ -13,15 +13,19 @@ QML_IMPORT_PATH =
 
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp \
-    controller/TypeMedia.cpp \
-    controller/Format.cpp \
-    controller/RessourceMusic.cpp \
-    controller/RessourceFilm.cpp \
-    controller/RessourceEpisode.cpp \
-    controller/FileMusic.cpp \
-    controller/FileMedia.cpp \
-    controller/FileFilm.cpp \
-    controller/FileEpisode.cpp
+    model/TypeMedia.cpp \
+    model/RessourceMusic.cpp \
+    model/RessourceFilm.cpp \
+    model/RessourceEpisode.cpp \
+    model/Format.cpp \
+    model/FileMusic.cpp \
+    model/FileMedia.cpp \
+    model/FileFilm.cpp \
+    model/FileEpisode.cpp \
+    controller/FileCtrl.cpp \
+    controller/ListFilesCtrl.cpp \
+    parserAPI/IMDBParser.cpp \
+    parserAPI/JSonFilmParser.cpp
 
 # Installation path
 # target.path =
@@ -31,16 +35,20 @@ include(qtquick2applicationviewer/qtquick2applicationviewer.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    controller/Format.h \
-    controller/RessourceFilm.h \
-    controller/RessourceEpisode.h \
-    controller/FilmFile.h \
-    controller/EpisodeFile.h \
-    controller/FileMusic.h \
-    controller/FileFilm.h \
-    controller/FileEpisode.h \
-    controller/FileMedia.h \
-    controller/TypeMedia.h \
-    controller/RessourceMusic.h
+    model/TypeMedia.h \
+    model/RessourceMusic.h \
+    model/RessourceFilm.h \
+    model/RessourceEpisode.h \
+    model/Format.h \
+    model/FileMusic.h \
+    model/FileMedia.h \
+    model/FileFilm.h \
+    model/FileEpisode.h \
+    controller/FileCtrl.h \
+    controller/ListFilesCtrl.h \
+    parserAPI/IMDBParser.h \
+    parserAPI/IParserAPI.h \
+    model/IRessource.h \
+    parserAPI/JSonFilmParser.h
 
 CONFIG -= X86_64
